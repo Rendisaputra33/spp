@@ -3,7 +3,7 @@ package org.tugas.utils;
 public class StringUtil {
 
         // function to generate a random string of length n
-        static String getAlphaNumericString(int n)
+        public static String random(int n)
         {
 
             // choose a Character random from this String

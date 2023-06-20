@@ -328,6 +328,8 @@ public class View extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
+        setTitle("Kelola Mahasiswa");
     }// </editor-fold>//GEN-END:initComponents
 
     private void tIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tIdActionPerformed

@@ -132,6 +132,8 @@ public class PembayaranView extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
+        setTitle("Daftar Pembayaran");
     }// </editor-fold>//GEN-END:initComponents
 
     /**

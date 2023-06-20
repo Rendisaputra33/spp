@@ -49,6 +49,7 @@ public class StudentDao implements Dao<Student> {
             list.add(Student.builder()
                     .nama(result.getString("nama"))
                     .id(result.getInt("id"))
+                    .nim(result.getString("nim"))
                     .prodi(result.getString("prodi"))
                     .semester(result.getInt("semester"))
                     .build());
