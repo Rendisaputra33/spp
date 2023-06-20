@@ -13,6 +13,8 @@ import java.sql.Date;
 public class Transaction {
     private Integer id;
     private String nim;
+    private String nama;
+    private String prodi;
     private String codeTransaction;
     private Integer semester;
     private Double amount;

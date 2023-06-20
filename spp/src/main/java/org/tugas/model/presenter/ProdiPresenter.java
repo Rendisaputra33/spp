@@ -38,4 +38,8 @@ public class ProdiPresenter extends AbstractTableModel {
     public String getColumnName(int column) {
         return columns[column];
     }
+
+    public Prodi getProdi(int row) {
+        return prodiList.get(row);
+    }
 }
