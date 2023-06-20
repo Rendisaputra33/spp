@@ -10,7 +10,7 @@ public class Database {
     public static Connection getConnection() {
         try {
             if (connection == null) {
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/spp", "root", "");
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/spp", "root", "root");
             }
         } catch (SQLException exception) {
             System.out.println(exception.getMessage());

@@ -14,4 +14,9 @@ public class Student {
     private String nim;
     private String prodi;
     private Integer semester;
+
+    @Override
+    public String toString() {
+        return nama + "-" + prodi + "-" + semester;
+    }
 }

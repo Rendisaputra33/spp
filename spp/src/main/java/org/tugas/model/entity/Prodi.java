@@ -11,4 +11,9 @@ import lombok.*;
 public class Prodi {
     private String prodi;
     private Double price;
+
+    @Override
+    public String toString() {
+        return prodi;
+    }
 }

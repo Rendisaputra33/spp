@@ -56,6 +56,20 @@ public class ProdiDao implements Dao<Prodi> {
         return false;
     }
 
+    public boolean updateProdi(Prodi prodi) {
+        try {
+            var stmt = connection.prepareStatement("UPDATE prodi SET prodi = ?, price = ? WHERE prodi = ?");
+            stmt.setString(1, prodi.getProdi());
+            stmt.setDouble(2, prodi.getPrice());
+            stmt.setString(3, prodi.getProdi());
+            return stmt.executeUpdate() > 0;
+        } catch (SQLException exception) {
+            System.out.println(exception.getMessage());
+        }
+
+        return false;
+    }
+
     public boolean deleteProdi(String prodi) {
         try {
             var stmt = connection.prepareStatement("DELETE FROM prodi WHERE prodi = ?");
@@ -71,10 +85,10 @@ public class ProdiDao implements Dao<Prodi> {
     @Override
     public void toList(List<Prodi> list, ResultSet result) throws SQLException {
         while (result.next()) {
-            Prodi.builder()
+            list.add(Prodi.builder()
                     .prodi(result.getString("prodi"))
                     .price(result.getDouble("price"))
-                    .build();
+                    .build());
         }
     }
 }
